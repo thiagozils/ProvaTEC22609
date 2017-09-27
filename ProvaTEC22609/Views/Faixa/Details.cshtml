@@ -1,0 +1,26 @@
+﻿@model ProvaTEC22609.Models.Faixa
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Thiago Andrey Zils - thiago.zils@catolicasc.org.br-->
+
+<br />
+
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Grau</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">@Model.Id</th>
+            <td>@Model.Nome</td>
+            <td>@Model.Grau</td>
+
+        </tr>
+    </tbody>
+</table>

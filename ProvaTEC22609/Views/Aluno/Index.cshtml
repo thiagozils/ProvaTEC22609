@@ -1,0 +1,29 @@
+﻿@model List <ProvaTEC22609.Models.Aluno>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2> Cadastrados </h2>
+
+<!-- Thiago Andrey Zils - thiago.zils@catolicasc.org.br-->
+
+@if (Model.Any())
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr><th>Alunos</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var aluno in Model)
+            {
+                <tr><td>@Html.ActionLink(aluno.Nome, "Details", new { aluno.Id })</td></tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Sem alunos no momento.</p>
+}

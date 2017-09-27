@@ -1,0 +1,22 @@
+﻿@model List<ProvaTEC22609.Models.TipoDeAssociacao>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Thiago Andrey Zils - thiago.zils@catolicasc.org.br-->
+
+<br />
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr><th>Associações  </th></tr>
+    </thead>
+    <tbody>
+        @foreach (var tipo in Model)
+            {
+            <tr><td>@Html.ActionLink(tipo.Nome, "Details", new { tipo.Id })</td></tr>
+             }
+    </tbody>
+</table>
+

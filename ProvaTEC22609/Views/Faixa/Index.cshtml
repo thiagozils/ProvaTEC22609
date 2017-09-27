@@ -1,0 +1,19 @@
+﻿@model List <ProvaTEC22609.Models.Faixa>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Thiago Andrey Zils - thiago.zils@catolicasc.org.br-->
+<br />
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr><th>Faixas</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var faixa in Model)
+            {
+            <tr><td>@Html.ActionLink(faixa.Nome, "Details", new { faixa.Id })</td></tr>
+        }
+    </tbody>
+</table>

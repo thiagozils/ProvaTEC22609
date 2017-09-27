@@ -1,0 +1,31 @@
+﻿@model ProvaTEC22609.Models.Aluno
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Thiago Andrey Zils - thiago.zils@catolicasc.org.br-->
+
+<br />
+<h2> <span class="glyphicon glyphicon-user"></span> &nbsp; @Model.Nome</h2>
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Faixa</th>
+            <th>Associacao</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">@Model.Id</th>
+            <td>@Model.Nome</td>
+            <td>@Model.Cpf</td>
+            <td>@Model.Faixa.Nome</td>
+            <td>@Model.TipoDeAssociacao.Nome</td>
+        </tr>
+    </tbody>
+</table>
+
